@@ -1,0 +1,174 @@
+/* כלליות */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* מניעת גלילה אופקית */
+    width: 100%; /* וודא שהדף לא יחרוג מהרוחב */
+    box-sizing: border-box; /* מחשבים את ה-padding וה-border כחלק מהגודל */
+    font-family: 'Heebo', sans-serif;
+}
+
+/* weather-app */
+.weather-app {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Heebo', sans-serif;
+    background-color: whitesmoke;
+    
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box; /* לכלול את ה-padding וה-margin בגודל הכללי של האלמנט */
+}
+
+/* header */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    font-weight: lighter;
+    margin-top: 20px; /* הוספת ריווח למעלה */
+    margin-bottom: 3%;
+}
+
+.header p {
+    color: grey; /* צבע אפור כהה לכותרת */
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: 1cm;
+      font-family: 'Heebo', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+/* חלוקת עמוד למרכיבים */
+.main-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(189, 206, 212);
+    width: 85%; /* הרחבת הרוחב ל-90% מרוחב המסך */
+    max-width: 1200px; /* קביעת רוחב מקסימלי */
+    height: 600px; /* קביעת גובה המלבן */
+    padding: 20px; /* ריווח פנימי */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* מרכז המלבן באמצע הדף */
+    box-sizing: border-box; /* לכלול את ה-padding וה-border בגודל האלמנט */
+}
+
+/* חלונית עבור תצוגת מזג האוויר */
+/* חלונית עבור תצוגת מזג האוויר */
+.weather-info {
+    background-color: #006F6A; /* צבע רקע של המלבן */
+    color: white;
+    padding: 20px;
+    border-radius: 16px;
+    width: 70%; /* התאמת הרוחב */
+    height: 75%;
+    text-align: center;
+    font-family: 'Heebo', sans-serif;
+    margin: auto; /* ממרכז את המלבן */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* תיחום חיצוני */
+}
+
+/* טמפרטורה */
+.weather-info .temp {
+    font-size: 80px; /* גודל מוגדל לטמפרטורה */
+    font-weight: bold;
+    line-height: 1; /* לצמצם רווחים בין הטמפרטורה לסטטוס */
+    position: relative; /* מאפשר עיצוב פנימי */
+}
+
+/* מצב מזג האוויר */
+.weather-info .temp .status {
+    font-size: 24px; /* גודל קטן יותר */
+    font-weight: lighter; /* ללא BOLD */
+    margin-top: 8px; /* רווח קטן מתחת לטמפרטורה */
+}
+
+/* שורה של נתוני מזג האוויר */
+.weather-info .details-row {
+    display: flex; /* תצוגת שורה */
+    justify-content: space-around; /* רווח שווה בין האלמנטים */
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* קו עליון */
+    font-size: 18px;
+}
+
+/* שורת תחזיות */
+.hourly-forecast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #005f5a; /* צבע רקע פנימי נוסף */
+    border-radius: 12px;
+    color: white;
+    font-family: 'Heebo', sans-serif;
+}
+
+.hourly-forecast div {
+    text-align: center;
+    font-size: 16px;
+}
+
+.input-container {
+    display: flex;
+    height: 40px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 8px;
+    width: 400px; 
+    margin-right: 0px; 
+    margin-left: 1cm;
+    align-items: center;
+    margin-top: 10px; /* הוספת ריווח בין התיבה לכפתור */
+    margin-bottom: 10%;
+}
+
+.input-container input[type="text"] {
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 70%; 
+    font-family: 'Heebo', sans-serif;
+    font-size: large;
+    margin-left: -50px;
+}
+
+.input-container button {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 80px;
+    height: 90%;
+    cursor: pointer;
+}
+.input-label {
+    font-size: 14px; /* גודל קטן לכיתוב */
+    color: grey; /* צבע אפור לכיתוב */
+    display: block; /* הצג את ה-label כבלוק */
+    left: 10px; /* רווח קטן מצד שמאל */
+    margin-bottom: 15%;
+    height: 100%;
+}
+
+
+/* תצוגת שגיאה */
+.error-container {
+    color: red;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo{
+    margin-left: 1cm;
+}
